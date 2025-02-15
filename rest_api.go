@@ -35,6 +35,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "method not allowed", http.StatusInternalServerError)
 
 }
+
 func list(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		userJson, err := json.Marshal(users)
